@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/purple_gray"
+    tools:context=".view.RemedioEditingActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@color/purple_gray"
+            tools:context=".view.RemedioEditingActivity">
+
+            <FrameLayout
+                android:id="@+id/sqr_nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:padding="8dp"
+                android:background="@drawable/white_rounded_frame"
+                android:elevation="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textview_nome_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:text="Nome do remédio"
+                    android:textColor="@color/green"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edittext_nome_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:paddingHorizontal="10dp"
+                    android:hint="Ex: Anador"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="20sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/sqr_descricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="17dp"
+                android:padding="8dp"
+                android:background="@drawable/white_rounded_frame"
+                android:elevation="8dp"
+                app:layout_constraintStart_toStartOf="@id/sqr_nome"
+                app:layout_constraintTop_toBottomOf="@id/sqr_nome">
+
+                <TextView
+                    android:id="@+id/textview_descricao_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:text="Descrição"
+                    android:textColor="@color/gray"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edittext_descricao_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:paddingHorizontal="10dp"
+                    android:hint="Ex: Para dor de cabeça e febre"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="20sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/sqr_diasdasemana"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="17dp"
+                android:padding="8dp"
+                android:background="@drawable/white_rounded_frame"
+                android:elevation="8dp"
+                app:layout_constraintStart_toStartOf="@id/sqr_descricao"
+                app:layout_constraintTop_toBottomOf="@id/sqr_descricao">
+
+                <TextView
+                    android:id="@+id/textview_diasdasemana_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:text="Dias que deve se medicar"
+                    android:textColor="@color/water_green"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_domingo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Domingo"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_segunda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    android:text="Segunda"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_terca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="110dp"
+                    android:text="Terça"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_quarta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="150dp"
+                    android:text="Quarta"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_quinta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Quinta"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_sexta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="70dp"
+                    android:text="Sexta"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_sabado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="110dp"
+                    android:text="Sábado"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="18sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/sqr_dosagem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="-10dp"
+                android:padding="8dp"
+                android:background="@drawable/white_rounded_frame"
+                android:elevation="8dp"
+                app:layout_constraintStart_toStartOf="@id/sqr_diasdasemana"
+                app:layout_constraintTop_toBottomOf="@id/sqr_diasdasemana">
+
+                <TextView
+                    android:id="@+id/textview_intervalo_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:text="Horários"
+                    android:textColor="@color/water_green"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinner_intervalo_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="40dp"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edittext_qtddosagem_details"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:paddingHorizontal="10dp"
+                    android:inputType="number"
+                    android:hint="Dosagem"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="20sp"
+                    android:textAlignment="center" />
+
+                <Spinner
+                    android:id="@+id/spinner_tipodosagem_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="95dp"
+                    android:textSize="18sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/sqr_horario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="17dp"
+                android:padding="8dp"
+                android:background="@drawable/white_rounded_frame"
+                android:elevation="8dp"
+                app:layout_constraintStart_toStartOf="@id/sqr_dosagem"
+                app:layout_constraintTop_toBottomOf="@id/sqr_dosagem">
+
+                <TextView
+                    android:id="@+id/textview_horario_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:text="Primeiro horário de medicação"
+                    android:textColor="@color/water_green"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TimePicker
+                    android:id="@+id/timepicker_horario_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:paddingHorizontal="10dp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/sqr_dtinicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="17dp"
+                android:padding="8dp"
+                android:background="@drawable/white_rounded_frame"
+                android:elevation="8dp"
+                app:layout_constraintStart_toStartOf="@id/sqr_horario"
+                app:layout_constraintTop_toBottomOf="@id/sqr_horario">
+
+                <TextView
+                    android:id="@+id/textview_dtinicio_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:text="Início do tratamento"
+                    android:textColor="@color/water_green"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <DatePicker
+                    android:id="@+id/datepicker_dtinicio_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:paddingHorizontal="10dp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/sqr_dtfim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="-10dp"
+                android:padding="8dp"
+                android:background="@drawable/white_rounded_frame"
+                android:elevation="8dp"
+                app:layout_constraintStart_toStartOf="@id/sqr_dtinicio"
+                app:layout_constraintTop_toBottomOf="@id/sqr_dtinicio">
+
+                <TextView
+                    android:id="@+id/textview_dtfim_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:text="Fim do tratamento"
+                    android:textColor="@color/water_green"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <DatePicker
+                    android:id="@+id/datepicker_dtfim_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:paddingHorizontal="10dp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/sqr_disponibilidade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="17dp"
+                android:padding="8dp"
+                android:background="@drawable/white_rounded_frame"
+                android:elevation="8dp"
+                app:layout_constraintStart_toStartOf="@id/sqr_dtfim"
+                app:layout_constraintTop_toBottomOf="@id/sqr_dtfim">
+
+                <TextView
+                    android:id="@+id/textview_disponibilidade_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:text="Quantidade disponível"
+                    android:textColor="@color/green"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edittext_disponibilidade_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:paddingHorizontal="10dp"
+                    android:inputType="number"
+                    android:hint="Ex: 16 comprimidos ou 15 mL"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="20sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/sqr_recmedica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="17dp"
+                android:padding="8dp"
+                android:background="@drawable/white_rounded_frame"
+                android:elevation="8dp"
+                app:layout_constraintStart_toStartOf="@id/sqr_disponibilidade"
+                app:layout_constraintTop_toBottomOf="@id/sqr_disponibilidade">
+
+                <TextView
+                    android:id="@+id/textview_recmedica_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:text="Recomendação médica"
+                    android:textColor="@color/blue"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edittext_recmedica_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:paddingHorizontal="10dp"
+                    android:hint="Ex: Não tomar em jejum"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="20sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/sqr_mednome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="-10dp"
+                android:padding="8dp"
+                android:background="@drawable/white_rounded_frame"
+                android:elevation="8dp"
+                app:layout_constraintStart_toStartOf="@id/sqr_recmedica"
+                app:layout_constraintTop_toBottomOf="@id/sqr_recmedica">
+
+                <TextView
+                    android:id="@+id/textview_mednome_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:text="Nome do médico que preescreveu o medicamento"
+                    android:textColor="@color/blue"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edittext_mednome_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="53dp"
+                    android:paddingHorizontal="10dp"
+                    android:hint="Ex: Dr. Dog Little"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="20sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/sqr_medespecializacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="-10dp"
+                android:padding="8dp"
+                android:background="@drawable/white_rounded_frame"
+                android:elevation="8dp"
+                app:layout_constraintStart_toStartOf="@id/sqr_mednome"
+                app:layout_constraintTop_toBottomOf="@id/sqr_mednome">
+
+                <TextView
+                    android:id="@+id/textview_medespecializacao_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:text="Especialização do médico"
+                    android:textColor="@color/blue"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edittext_medespecializacao_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:paddingHorizontal="10dp"
+                    android:hint="Ex: Cardiologista"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="20sp" />
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/button_save_remedio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Salvar"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sqr_medespecializacao" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
